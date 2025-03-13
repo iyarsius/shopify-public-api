@@ -7,7 +7,7 @@
   },
   "name": "shopify-public-api",
   "version": "1.0.1",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "test": "ts-node test.ts",
     "build": "tsc && npm version patch"
