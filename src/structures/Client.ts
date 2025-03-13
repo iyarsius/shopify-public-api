@@ -12,8 +12,8 @@ export class Shopify {
         const response = await fetch(`${this.baseUrl}/search/suggest.json?q=${query}`, {
             signal: params?.abortSignal
         });
-        
-        const data = await response.json();
+
+        const data = await response.json() as any;
 
         return data.resources.results.products.map(p => new Product(this, p));
     };

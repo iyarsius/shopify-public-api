@@ -36,7 +36,7 @@ export class Product implements IProduct {
 
     async fetchDetails() {
         const response = await fetch(`${this.client.baseUrl}/products/${this.handle}.json`);
-        const data = await response.json();
+        const data = await response.json() as any;
 
         // avoid conflicts with the existing data
         delete data.product.image
